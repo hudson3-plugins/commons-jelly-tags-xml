@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.hudsonci.stapler</groupId>
+  <artifactId>commons-jelly-tags-xml</artifactId>
+  <packaging>jar</packaging>
+  <version>1.1-hudson-20120704-SNAPSHOT</version>
+  <name>commons-jelly-tags-xml</name>
+  <url>http://maven.apache.org</url>
+  
+  <!-- Even though these tests will pass with xpath-service-provider,
+       during test we have only the default implementation, which fails
+       some tests. Hence the skip. -->
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <skip>true</skip><!-- Tests fail with default xpath-service -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hudsonci.stapler</groupId>
+      <artifactId>commons-jelly-tags-junit</artifactId>
+      <version>1.0-hudson-20120704-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>1.6.1</version>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+  	  <groupId>org.hudsonci.stapler</groupId>
+      <artifactId>commons-jelly</artifactId>
+      <version>1.1-hudson-20120704-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <name>Sonatype Nexus Snapshots</name>
+      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
+    </snapshotRepository>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Staging Repository</name>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:git://github.com/hudson3-plugins/${project.artifactId}.git</connection>
+    <developerConnection>scm:git:git@github.com:hudson3-plugins/${project.artifactId}.git</developerConnection>
+    <url>https://github.com/hudson3-plugins/${project.artifactId}</url>
+  </scm>
+    
+</project>
