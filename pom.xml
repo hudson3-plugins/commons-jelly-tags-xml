@@ -3,7 +3,7 @@
   <groupId>org.hudsonci.stapler</groupId>
   <artifactId>commons-jelly-tags-xml</artifactId>
   <packaging>jar</packaging>
-  <version>1.1-hudson-20120704</version>
+  <version>1.1-hudson-20120910-SNAPSHOT</version>
   <name>commons-jelly-tags-xml</name>
   <url>http://jakarta.apache.org/commons/jelly/</url>
   <description>The Jelly XML Tag Library</description>
@@ -40,7 +40,7 @@
     <dependency>
       <groupId>org.hudsonci.stapler</groupId>
       <artifactId>commons-jelly-tags-junit</artifactId>
-      <version>1.0-hudson-20120704</version>
+      <version>1.0-hudson-20120910-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -52,7 +52,7 @@
     <dependency>
   	  <groupId>org.hudsonci.stapler</groupId>
       <artifactId>commons-jelly</artifactId>
-      <version>1.1-hudson-20120704</version>
+      <version>1.1-hudson-20120910-SNAPSHOT</version>
     </dependency>
   </dependencies>
 
